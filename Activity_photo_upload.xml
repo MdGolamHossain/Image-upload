@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundSecondColor"
+    tools:context=".Setting.PhotoUploadActivity"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        app:elevation="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:elevation="0dp"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@color/brandSecondColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/backImg"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bg_ciercale_shape"
+                android:scaleType="center"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="#ffffff"
+                />
+
+            <TextView
+                android:id="@+id/visualActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:text="Change Photo"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_14sdp"
+
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:neumorph_shapeType="basin"
+        app:neumorph_shadowColorLight="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:neumorph_shadowColorDark="@color/brandSecondColor"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_30sdp"
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                app:lottie_rawRes="@raw/send"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                />
+
+
+            <TextView
+                android:id="@+id/linkId"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:text="Send us your photo!"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/_14sdp"
+
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:text="@golamHossain"
+            android:background="@drawable/upload_photo_round"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textStyle="normal"
+            android:maxLines="1"
+            android:textSize="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:drawableLeft="@drawable/baseline_person_outline_24"
+            android:paddingStart="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload your Image here"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/selectImageId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/upload_photo_round"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            >
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/BackgroundSecondColor"
+                android:layout_gravity="center_horizontal"
+
+                >
+                <ImageView
+                    android:id="@+id/tvImage"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/upload"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tvMessage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload a photo"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvMessageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click here and select your photo"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/uploadButton"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:background="@drawable/main_button"
+            android:elevation="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:shadowColor="@color/shape"
+            android:textAllCaps="false"
+            android:textColor="@color/main3"
+
+
+            >
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Update"
+                android:fontFamily="@font/poppins"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+
+                />
+
+            <ProgressBar
+                android:id="@+id/progressbarId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+
+
+</RelativeLayout>
